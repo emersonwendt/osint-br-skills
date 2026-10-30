@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "Se usar este material, cite-o conforme abaixo."
+title: "OSINT-BR: skills de investigação em fontes abertas para o Claude"
+type: software
+version: 1.0.0
+date-released: 2026-10-30
+license: MIT
+repository-code: "https://github.com/emersonwendt/osint-br-skills"
+abstract: >-
+  Biblioteca de skills para assistentes de IA (Claude e Claude Code) voltada à
+  investigação em fontes abertas (OSINT), adaptada às fontes, à legislação e à
+  prática investigativa brasileiras, com ênfase em método, limites éticos e
+  cadeia de custódia. Material didático para os cursos do autor na WB
+  Educação, na Faculdade Brasileira de Inovação (FABIN) e na formação e
+  capacitação das Polícias e do Ministério Público.
+keywords:
+  - OSINT
+  - inteligência
+  - investigação digital
+  - cadeia de custódia
+  - inteligência artificial
+  - Claude
+authors:
+  - family-names: Wendt
+    given-names: Emerson
+    orcid: "https://orcid.org/0000-0002-0195-5445"
+    affiliation: "Universidade La Salle"
+references:
+  - type: software
+    title: "UseOSINT Skills"
+    authors:
+      - name: "osint-skills contributors"
+    repository-code: "https://github.com/UseOSINT/Skills"
+    license: MIT
