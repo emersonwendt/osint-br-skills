@@ -4,6 +4,14 @@ title: "OSINT-BR: skills de investigação em fontes abertas para o Claude"
 type: software
 version: 1.0.0
 date-released: 2026-10-30
+doi: 10.5281/zenodo.23808035
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23808035
+    description: "DOI de todas as versões (aponta sempre para a mais recente)"
+  - type: doi
+    value: 10.5281/zenodo.23808036
+    description: "DOI da versão 1.0.0"
 license: MIT
 repository-code: "https://github.com/emersonwendt/osint-br-skills"
 abstract: >-

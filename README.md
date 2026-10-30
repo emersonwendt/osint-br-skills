@@ -1,5 +1,7 @@
 # OSINT-BR — Skills de investigação em fontes abertas para o Claude
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23808035.svg)](https://doi.org/10.5281/zenodo.23808035)
+
 Biblioteca de *skills* (instruções estruturadas para assistentes de IA) para investigação em fontes abertas (OSINT), adaptada às fontes, à legislação e à prática investigativa brasileiras. Funciona no **Claude** (web e desktop) e no **Claude Code**.
 
 > [!IMPORTANT]
@@ -56,7 +58,9 @@ Melhorias são bem-vindas — especialmente fontes estaduais, correções de fon
 
 ## Como citar
 
-WENDT, Emerson. **OSINT-BR: skills de investigação em fontes abertas para o Claude**. Versão 1.0.0. 2026. Disponível em: https://github.com/emersonwendt/osint-br-skills.
+WENDT, Emerson. **OSINT-BR: skills de investigação em fontes abertas para o Claude**. Versão 1.0.0. Zenodo, 2026. DOI: 10.5281/zenodo.23808036. Disponível em: https://doi.org/10.5281/zenodo.23808036.
+
+Para citar sempre a versão mais recente, use o DOI 10.5281/zenodo.23808035 (https://doi.org/10.5281/zenodo.23808035).
 
 Metadados completos em [CITATION.cff](CITATION.cff).
 
