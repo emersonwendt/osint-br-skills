@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "Se usar este material, cite-o conforme abaixo."
 title: "OSINT-BR: skills de investigação em fontes abertas para o Claude"
 type: software
-version: 1.0.0
-date-released: 2026-10-30
+version: 1.1.0
+date-released: 2026-11-15
 doi: 10.5281/zenodo.23808035
 identifiers:
   - type: doi

@@ -28,7 +28,7 @@ O agente [`analista-osint-br`](agents/analista-osint-br.md) conduz a investigaç
 
 **Claude (web e desktop)** — planos Pro, Max, Team e Enterprise:
 
-1. Baixe os três arquivos `.zip` na página **Releases** deste repositório (ou gere-os com `scripts/empacotar.sh`).
+1. Baixe os seis arquivos `.zip` das skills na página **Releases** deste repositório (ou gere-os com `scripts/empacotar.sh`).
 2. No Claude, abra **Settings > Capabilities** e confirme que *Code execution and file creation* está ativo.
 3. Em **Skills**, clique em **Upload skill** e envie cada `.zip`.
 

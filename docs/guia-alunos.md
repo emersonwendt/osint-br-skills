@@ -2,11 +2,11 @@
 
 *Guia para alunos dos cursos do Prof. Emerson Wendt — WB Educação, Faculdade Brasileira de Inovação (FABIN), Polícias e Ministério Público*
 
-Prof. Emerson Wendt · versão 1.0.0 · 30/10/2026
+Prof. Emerson Wendt · versão 1.1.0 · 15/11/2026 · contribuição de Alan Douglas Silva (WB Educação)
 
 ## 1. Apresentação
 
-Este guia ensina a instalar, testar e melhorar três *skills* de OSINT adaptadas ao Brasil, para uso no Claude e no Claude Code.
+Este guia ensina a instalar, testar e melhorar seis *skills* de OSINT adaptadas ao Brasil, para uso no Claude e no Claude Code.
 
 Uma *skill* é uma pasta com um arquivo `SKILL.md`: instruções, roteiros e cuidados que o assistente carrega quando a tarefa pede. Em vez de repetir o método a cada conversa, você o escreve uma vez — e o melhora com o uso.
 
@@ -21,20 +21,23 @@ Ao final, você deverá ser capaz de:
 
 ## 2. O que vem no pacote
 
-São três skills que trabalham juntas: um núcleo de método e duas skills técnicas.
+São seis skills que trabalham juntas: um núcleo de método e cinco skills técnicas. Desde a versão 1.1.0, há também o agente `analista-osint-br`, para o Claude Code.
 
 | Skill | Para quê | Principais conteúdos |
 | --- | --- | --- |
 | `osint-fontes-abertas` | Núcleo: como investigar | Escopo autorizado, limites, canais formais, ciclo de inteligência, Sistema Almirantado, hipóteses concorrentes, escala de probabilidade, OPSEC, cadeia de custódia, relatório, grafo de vínculos |
 | `osint-infraestrutura-digital` | Domínios, sites e servidores | RDAP do Registro.br, DNS, IP/ASN, subdomínios por Certificate Transparency, Shodan/Censys, Wayback e WARC, pesquisa avançada, histórico Git, roteiro de site de golpe |
 | `osint-midia-e-ativos` | Imagens, empresas, cripto, veículos | Metadados, busca reversa, autenticidade, geolocalização com pistas brasileiras, CNPJ e beneficiário final, rastreio de criptoativos, aeronaves (RAB/ANAC) e embarcações |
+| `osint-identidade-digital` | Nome de usuário, e-mail, telefone, perfis públicos | Roteiro por seletor, validação de acertos de enumeração, mensageria, ferramentas a evitar; pessoa privada só nos casos do núcleo |
+| `osint-preservacao-evidencias` | Evidência que não pode se perder | Captura local (SingleFile, WARC, WACZ), sigilo dos arquivos públicos, manifesto com SHA-256 e script de conferência |
+| `ints-outras-disciplinas` | Demais disciplinas de inteligência | CYBINT/DNINT, forense digital, FININT, GEOINT, IMINT, TECHINT, MASINT, MEDINT/BIOINT, HUMINT e SIGINT abertos, com o que exige canal formal |
 
 O núcleo encaminha o trabalho pelo seletor inicial: domínio ou site vai para a infraestrutura; foto, empresa, carteira ou aeronave vai para mídia e ativos. Ele vale sempre, inclusive quando a skill técnica está em uso.
 
 Arquivos de instalação (baixe na página **Releases** do repositório ou gere com `scripts/empacotar.sh`):
 
-- `osint-fontes-abertas.zip`, `osint-infraestrutura-digital.zip`, `osint-midia-e-ativos.zip` — um por skill, para o Claude (web e desktop).
-- `skills-osint-br-claude-code.zip` — as três pastas juntas, para o Claude Code.
+- `osint-fontes-abertas.zip`, `osint-infraestrutura-digital.zip`, `osint-midia-e-ativos.zip`, `osint-identidade-digital.zip`, `osint-preservacao-evidencias.zip` e `ints-outras-disciplinas.zip` — um por skill, para o Claude (web e desktop).
+- `skills-osint-br-claude-code.zip` — as seis pastas juntas, para o Claude Code (ou instale como plugin, que traz também o agente: veja o README).
 
 ## 3. Antes de começar: ética e limites
 
@@ -53,12 +56,12 @@ Se o exercício exigir algo fora dessas regras, pare e consulte o professor.
 
 No Claude, cada skill é enviada como um arquivo .zip, em **Settings > Capabilities**. O recurso está disponível nos planos Pro, Max, Team e Enterprise; em Team/Enterprise, o administrador precisa tê-lo habilitado ([Central de Ajuda](https://support.claude.com/en/articles/12512180-using-skills-in-claude)).
 
-1. Baixe os três arquivos .zip das skills (seção 2). Não descompacte.
+1. Baixe os seis arquivos .zip das skills (seção 2). Não descompacte.
 2. Abra o Claude e vá em **Settings > Capabilities**.
 3. Confirme que **Code execution and file creation** está ativado — as skills dependem dele.
 4. Na seção **Skills**, clique em **Upload skill** e envie `osint-fontes-abertas.zip`.
-5. Repita para `osint-infraestrutura-digital.zip` e `osint-midia-e-ativos.zip`.
-6. Verifique se as três aparecem ativadas na lista.
+5. Repita para os outros cinco arquivos.
+6. Verifique se as seis aparecem ativadas na lista.
 
 O mesmo procedimento vale no aplicativo desktop. As skills ficam na sua conta e passam a valer em todas as conversas.
 
@@ -84,7 +87,7 @@ Expand-Archive "$HOME\Downloads\skills-osint-br-claude-code.zip" -DestinationPat
 Get-ChildItem "$HOME\.claude\skills"
 ```
 
-O resultado esperado são três pastas, cada uma com seu `SKILL.md`. Feche e abra o Claude Code (`claude` no terminal) e pergunte: "Quais skills de OSINT você tem disponíveis?".
+O resultado esperado são seis pastas, cada uma com seu `SKILL.md`. Feche e abra o Claude Code (`claude` no terminal) e pergunte: "Quais skills de OSINT você tem disponíveis?".
 
 No Claude Code, os comandos rodam no seu computador e as consultas saem do seu IP. Em rede institucional, isso identifica o órgão — releia a seção de OPSEC da skill-núcleo antes de trabalhar.
 
