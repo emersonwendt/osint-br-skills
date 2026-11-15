@@ -34,7 +34,7 @@ Sem autorização identificável: parar. Investigação não autorizada não se 
 
 ### Limites inegociáveis
 - **Sem intrusão**: não autenticar em sistemas do alvo, não testar credenciais encontradas, não explorar vulnerabilidades, não fazer engenharia social, não usar dados de vazamento para acessar contas.
-- **Pessoa natural privada**: não montar dossiê, não localizar endereço residencial, local de trabalho, rotina, familiares, saúde, religião ou orientação. Pessoas naturais entram apenas como: (a) autoauditoria do próprio usuário ou de quem o autorizou expressamente; (b) figura pública na atuação pública; (c) identificadores usados no próprio ato ilícito (perfil-golpe, número do falso gerente, chave Pix, domínio), sem estender à vida privada de quem estiver por trás. Identificar a pessoa real é tarefa dos canais formais (seção 4).
+- **Pessoa natural privada**: não montar dossiê, não localizar endereço residencial, local de trabalho, rotina, familiares, saúde, religião ou orientação. Pessoas naturais entram apenas como: (a) autoauditoria do próprio usuário ou de quem o autorizou expressamente; (b) figura pública na atuação pública; (c) identificadores usados no próprio ato ilícito (perfil-golpe, número do falso gerente, chave Pix, domínio), sem estender à vida privada de quem estiver por trás; (d) exceção: **autoridade com procedimento instaurado** (inquérito, PIC ou equivalente), com a autoridade, o número do procedimento e a finalidade registrados antes da coleta, e ainda assim só o necessário ao objetivo. Fora de (a) a (d), identificar a pessoa real é tarefa dos canais formais (seção 4). Em atividade didática, a exceção (d) nunca se aplica a pessoa real.
 - **Exploração sexual infantil**: não buscar nem analisar conteúdo; orientar encaminhamento (SaferNet, autoridade competente).
 - **Publicidade não é permissão**: agregar dados pessoais públicos é tratamento de dados (LGPD). Mesmo sob o art. 4º, III (segurança pública/investigação), valem necessidade, proporcionalidade e minimização.
 
@@ -63,7 +63,7 @@ Escrever também o **negativo**: que achado significaria "não". Se nada puder s
 | Empresa, CNPJ, marca, nota fiscal | osint-midia-e-ativos |
 | Carteira/transação cripto | osint-midia-e-ativos |
 | Aeronave (PR-, PP-, PT-, PS-, PU-) ou embarcação (IMO/MMSI) | osint-midia-e-ativos |
-| Nome de usuário, e-mail ou telefone | osint-identidade-digital, só nos casos da seção 1 (autoauditoria, figura pública, identificador usado no próprio ato ilícito); fora deles, canal formal |
+| Nome de usuário, e-mail ou telefone | osint-identidade-digital, só nos casos da seção 1 (autoauditoria, figura pública, identificador usado no próprio ato ilícito ou procedimento instaurado por autoridade); fora deles, canal formal |
 | Página, perfil ou arquivo que precisa virar evidência | osint-preservacao-evidencias |
 | IOC, reputação de IP, Tor; sanções e mercado; satélite, ambiental e transporte; equipamento, patente; sinal aberto; saúde pública | ints-outras-disciplinas |
 Sem ponto de partida claro: comece pelo seletor **único e indexado** (domínio e e-mail vencem nome e apelido).

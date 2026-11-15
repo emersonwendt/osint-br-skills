@@ -17,9 +17,10 @@ Contribuição de Alan Douglas Silva (Professor na WB Educação).
 
 ### Alterado
 - `osint-fontes-abertas`: novas skills no encaminhamento por seletor; preservação sem expor a URL investigada (acionar archive.today ou "Save Page Now" publica a consulta); checagem obrigatória antes de usar ferramenta fora das skills.
-- `osint-infraestrutura-digital`: Amass v5 sem `-passive` (conferido no código-fonte), dnsx sem força bruta, arquivos públicos só para o que pode ser exposto.
+- `osint-infraestrutura-digital`: Amass v5 sem subcomando `intel` e com `-passive` obsoleta, porque o passivo é o padrão (conferido no código-fonte), dnsx sem força bruta, arquivos públicos só para o que pode ser exposto.
 - `osint-midia-e-ativos`: análise forense local e alerta sobre envio de imagem a buscadores e ao FotoForensics.
 - Scripts de instalação copiam também o agente.
+- Pessoa natural privada: nova exceção "d" no núcleo, na skill de identidade digital e no agente — nível Alta só para autoridade com procedimento instaurado, com autoridade, número e finalidade registrados em `notas/autorizacao.md`; fora disso, a regra padrão e o canal formal.
 
 ## [1.0.0] — 2026-10-30
 

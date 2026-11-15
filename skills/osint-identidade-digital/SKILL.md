@@ -18,6 +18,7 @@ Pessoa natural privada só entra nos casos da seção 1 do núcleo:
 1. **Autoauditoria** do próprio usuário ou de quem o autorizou expressamente.
 2. **Figura pública**, na atuação pública.
 3. **Identificadores do próprio ato ilícito** (perfil-golpe, número do falso gerente, e-mail do phishing), sem estender à vida privada de quem estiver por trás.
+4. **Procedimento instaurado por autoridade** (exceção "d" do núcleo): só com a autoridade, o número do procedimento e a finalidade registrados em `notas/autorizacao.md` antes da primeira busca, e limitado ao objetivo do procedimento. Os limites desta skill continuam valendo; o que exigir dado cadastral, conteúdo privado ou conta segue pelo canal formal. Em atividade didática, nunca com pessoa real.
 
 Fora disso, o caminho é o canal formal (núcleo, seção 4). Não use esta skill para: montar dossiê; achar endereço, local de trabalho, rotina, familiares, saúde, religião ou orientação; descobrir "quem é" o titular de conta ou número. Seguidores e seguidos de particular não se coletam: revelam vínculos e familiares.
 
@@ -26,7 +27,7 @@ Fora disso, o caminho é o canal formal (núcleo, seção 4). Não use esta skil
 **Limites desta skill**: sem login ou cookies na plataforma-alvo; sem contornar captcha, bloqueio ou limite de taxa; sem dado ou credencial vazada; sem reconhecimento facial; sem contato (não seguir, curtir, enviar solicitação ou mensagem, nem entrar em grupo); sem perfil falso; sem varredura ativa, crawling ou monitoramento contínuo.
 
 ## 2. Antes de buscar
-1. **Escopo**: qual dos três casos da seção 1 autoriza esta busca? Se nenhum, pare.
+1. **Escopo**: qual dos quatro casos da seção 1 autoriza esta busca? Se nenhum, pare.
 2. **Discriminadores**: escreva o que o alvo verdadeiro tem (cidade, profissão, idioma, período de atividade) e o que não pode ter. Depois que um candidato aparece, os discriminadores somem.
 3. **Critério de pronto**: "a conta X pertence ao titular do e-mail Y?" fecha em confirmado ou rejeitado, ou quando as fontes previstas se esgotarem, documentadas.
 4. **Baseline**: uma ou duas checagens manuais e baratas antes de qualquer ferramenta.

@@ -64,7 +64,7 @@ curl -s 'https://crt.sh/?q=Empresa+Exemplo+Ltda&output=json' | jq -r '.[].name_v
 - Curinga (`*.exemplo`) esconde; minerar o período anterior ao curinga e usar DNS passivo e arquivos.
 - CT é histórico, não inventário: nomes mortos, CAs internas e certificados de origem ficam de fora.
 - Teste de DNS curinga antes de confiar em força bruta: resolver `zzq7x-inexistente.exemplo.com.br`.
-- Agregadores (subfinder, amass) e resolução (dnsx) rodam na máquina do usuário; `httpx` e força bruta são ativos. No OWASP Amass v5 não há subcomando `intel` nem flag `-passive`: o padrão deixa `-active`, `-brute` e `-alts` desligados, mas a ferramenta ainda resolve nomes por DNS (conferido no código-fonte em 15/11/2026). No dnsx, resolver uma lista (`-l`) é passivo; `-d` com `-w` é força bruta e `-axfr` é transferência de zona.
+- Agregadores (subfinder, amass) e resolução (dnsx) rodam na máquina do usuário; `httpx` e força bruta são ativos. No OWASP Amass v5 não há subcomando `intel`, e a flag `-passive` ficou obsoleta porque o modo passivo virou o padrão: `-active`, `-brute` e `-alts` vêm desligados, mas a ferramenta ainda resolve nomes por DNS (conferido no código-fonte em 15/11/2026). No dnsx, resolver uma lista (`-l`) é passivo; `-d` com `-w` é força bruta e `-axfr` é transferência de zona.
 - Desconfiar de typosquats que aparecem como se fossem do alvo: conferir o domínio registrável letra a letra.
 
 ## 4. Servidores expostos
