@@ -33,6 +33,9 @@ authors:
     given-names: Emerson
     orcid: "https://orcid.org/0000-0002-0195-5445"
     affiliation: "Universidade La Salle"
+  - family-names: Silva
+    given-names: Alan Douglas
+    affiliation: "WB Educação"
 references:
   - type: software
     title: "UseOSINT Skills"
