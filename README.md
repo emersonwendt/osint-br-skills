@@ -78,7 +78,9 @@ Melhorias são bem-vindas — especialmente fontes estaduais, correções de fon
 
 ## Como citar
 
-WENDT, Emerson. **OSINT-BR: skills de investigação em fontes abertas para o Claude**. Versão 1.0.0. Zenodo, 2026. DOI: 10.5281/zenodo.23808036. Disponível em: https://doi.org/10.5281/zenodo.23808036.
+WENDT, Emerson; SILVA, Alan Douglas. **OSINT-BR: skills de investigação em fontes abertas para o Claude**. Versão 1.1.0. Zenodo, 2026. DOI: 10.5281/zenodo.24246688. Disponível em: https://doi.org/10.5281/zenodo.24246688.
+
+Versão 1.0.0 (só as três primeiras skills): WENDT, Emerson. Zenodo, 2026. DOI: 10.5281/zenodo.23808036.
 
 Para citar sempre a versão mais recente, use o DOI 10.5281/zenodo.23808035 (https://doi.org/10.5281/zenodo.23808035).
 

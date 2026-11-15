@@ -12,6 +12,9 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.23808036
     description: "DOI da versão 1.0.0"
+  - type: doi
+    value: 10.5281/zenodo.24246688
+    description: "DOI da versão 1.1.0"
 license: MIT
 repository-code: "https://github.com/emersonwendt/osint-br-skills"
 abstract: >-
