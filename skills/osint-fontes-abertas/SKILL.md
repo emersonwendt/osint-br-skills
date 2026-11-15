@@ -11,6 +11,11 @@ Biblioteca:
 - **osint-fontes-abertas** (esta) — escopo, método, análise, OPSEC, custódia, relatório, grafo, uso didático.
 - **osint-infraestrutura-digital** — domínios, DNS, IP/ASN, subdomínios, servidores expostos, páginas apagadas, pesquisa avançada, Git, sites de golpe.
 - **osint-midia-e-ativos** — imagens/vídeos (origem, autenticidade, metadados, geolocalização), empresas e beneficiário final, criptoativos, aeronaves e embarcações.
+- **osint-identidade-digital** — nome de usuário, e-mail, telefone e perfis públicos em plataformas e mensageria, nos limites da seção 1.
+- **osint-preservacao-evidencias** — captura local de páginas e arquivos, manifesto de evidências com SHA-256 e conferência de integridade.
+- **ints-outras-disciplinas** — ameaças e redes (CYBINT/DNINT), forense digital, FININT, GEOINT, IMINT, TECHINT, MASINT, MEDINT/BIOINT, apoio a HUMINT e SIGINT em transmissões abertas.
+
+As três últimas são contribuição de Alan Douglas Silva (Professor na WB Educação).
 
 Adaptado e traduzido, com fontes e direito brasileiros, a partir de UseOSINT/Skills (licença MIT, © 2026 osint-skills contributors). Uso sujeito a ETICA.md e AVISO-LEGAL.md do repositório.
 
@@ -58,7 +63,9 @@ Escrever também o **negativo**: que achado significaria "não". Se nada puder s
 | Empresa, CNPJ, marca, nota fiscal | osint-midia-e-ativos |
 | Carteira/transação cripto | osint-midia-e-ativos |
 | Aeronave (PR-, PP-, PT-, PS-, PU-) ou embarcação (IMO/MMSI) | osint-midia-e-ativos |
-| Nome de usuário, e-mail ou telefone de particular | Só autoauditoria ou artefato do golpe (seção 1); caso contrário, canal formal |
+| Nome de usuário, e-mail ou telefone | osint-identidade-digital, só nos casos da seção 1 (autoauditoria, figura pública, identificador usado no próprio ato ilícito); fora deles, canal formal |
+| Página, perfil ou arquivo que precisa virar evidência | osint-preservacao-evidencias |
+| IOC, reputação de IP, Tor; sanções e mercado; satélite, ambiental e transporte; equipamento, patente; sinal aberto; saúde pública | ints-outras-disciplinas |
 Sem ponto de partida claro: comece pelo seletor **único e indexado** (domínio e e-mail vencem nome e apelido).
 
 ## 4. Canais formais (o que o OSINT não substitui)
@@ -123,7 +130,7 @@ Base: CPP, arts. 158-A a 158-F; ABNT NBR ISO/IEC 27037 (identificação, coleta,
 - Para cada evidência: URL ou ferramenta e consulta exata; data/hora com fuso; método; ferramenta e versão; responsável.
 - Preferir o original (HTML, cabeçalhos, arquivos de mídia, WARC) ao print. Print é ilustração, não prova: a jurisprudência tem exigido integridade e cadeia de custódia para capturas de tela — conferir os precedentes atuais antes de citar.
 - Hash SHA-256 de todo arquivo (`sha256sum arquivo` no Linux; `shasum -a 256 arquivo` no macOS; `Get-FileHash -Algorithm SHA256` no Windows). Original intocado, trabalho em cópia.
-- Arquivar ao citar (Wayback e archive.today) e manter cópia local: arquivos públicos também são removidos.
+- Manter cópia local (osint-preservacao-evidencias): arquivos públicos também são removidos. Consultar o Wayback é seguro; **acionar** o archive.today ou o "Save Page Now" do Wayback publica a URL investigada, então em caso sigiloso preserve só localmente e arquive em serviço público apenas o que já pode ser exposto.
 - Coleta feita por ferramenta automatizada ou IA deve ser revalidada por agente humano antes de uso probatório.
 
 ## 8. Relatório (Relatório Técnico de Inteligência OSINT)
@@ -159,6 +166,8 @@ Formato por público: autoridade/gestor = uma página de BLUF; processo judicial
 **Claude (web/desktop)** — o ambiente de código roda na nuvem, com acesso restrito à internet (em geral, só repositórios de pacotes e GitHub). Coletar na web pela busca e leitura de páginas do próprio Claude; usar o shell para analisar **arquivos enviados** (exiftool, sha256sum, networkx, jq) e gerar comandos para o usuário rodar na própria máquina.
 
 Em ambos: passividade por padrão (força bruta de DNS, varredura de portas e sondagem HTTP só com autorização escrita) e nada de contornar bloqueios com proxies, caches ou espelhos.
+
+**Ferramenta fora das skills** — antes de usar, confirmar na página oficial: (1) gratuidade real e licença; (2) se a consulta toca, notifica ou expõe o alvo; (3) se há upload, login, crawling, força bruta ou resolução ativa; (4) limite de taxa e retenção dos dados. Gratuita não quer dizer passiva. Sem confirmação, registrar "status não confirmado" e não usar.
 
 ## 11. Uso didático (Pós IA Investigação e Inteligência)
 - Exercícios com alvos fictícios ou institucionais, nunca particulares reais.

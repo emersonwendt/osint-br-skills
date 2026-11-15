@@ -4,6 +4,23 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/); 
 
 ## [Não publicado]
 
+## [1.1.0] — 2026-11-15
+
+Contribuição de Alan Douglas Silva (Professor na WB Educação).
+
+### Adicionado
+- Skill `osint-identidade-digital` (nome de usuário, e-mail, telefone, perfis públicos e mensageria, nos limites da seção 1 do núcleo).
+- Skill `osint-preservacao-evidencias` (captura local, manifesto com SHA-256 e script `manifesto.py` de registro e conferência).
+- Skill `ints-outras-disciplinas` (CYBINT/DNINT, forense digital, FININT, GEOINT, IMINT, TECHINT, MASINT, MEDINT/BIOINT, HUMINT e SIGINT abertos), com uma referência por disciplina.
+- Agente `analista-osint-br`.
+- Plugin do Claude Code (`.claude-plugin/plugin.json`) e marketplace no próprio repositório (`.claude-plugin/marketplace.json`).
+
+### Alterado
+- `osint-fontes-abertas`: novas skills no encaminhamento por seletor; preservação sem expor a URL investigada (acionar archive.today ou "Save Page Now" publica a consulta); checagem obrigatória antes de usar ferramenta fora das skills.
+- `osint-infraestrutura-digital`: Amass v5 sem `-passive` (conferido no código-fonte), dnsx sem força bruta, arquivos públicos só para o que pode ser exposto.
+- `osint-midia-e-ativos`: análise forense local e alerta sobre envio de imagem a buscadores e ao FotoForensics.
+- Scripts de instalação copiam também o agente.
+
 ## [1.0.0] — 2026-10-30
 
 ### Adicionado

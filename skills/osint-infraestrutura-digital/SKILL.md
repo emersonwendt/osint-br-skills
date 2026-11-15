@@ -64,7 +64,7 @@ curl -s 'https://crt.sh/?q=Empresa+Exemplo+Ltda&output=json' | jq -r '.[].name_v
 - Curinga (`*.exemplo`) esconde; minerar o período anterior ao curinga e usar DNS passivo e arquivos.
 - CT é histórico, não inventário: nomes mortos, CAs internas e certificados de origem ficam de fora.
 - Teste de DNS curinga antes de confiar em força bruta: resolver `zzq7x-inexistente.exemplo.com.br`.
-- Agregadores (subfinder, amass) e resolução (dnsx) rodam na máquina do usuário; `httpx` e força bruta são ativos.
+- Agregadores (subfinder, amass) e resolução (dnsx) rodam na máquina do usuário; `httpx` e força bruta são ativos. No OWASP Amass v5 não há subcomando `intel` nem flag `-passive`: o padrão deixa `-active`, `-brute` e `-alts` desligados, mas a ferramenta ainda resolve nomes por DNS (conferido no código-fonte em 15/11/2026). No dnsx, resolver uma lista (`-l`) é passivo; `-d` com `-w` é força bruta e `-axfr` é transferência de zona.
 - Desconfiar de typosquats que aparecem como se fossem do alvo: conferir o domínio registrável letra a letra.
 
 ## 4. Servidores expostos
@@ -79,12 +79,12 @@ Ler com cuidado: data de varredura em todo registro; CVE é inferência por vers
 ## 5. Páginas apagadas e arquivos
 | Situação | Vá para |
 |---|---|
-| URL que hoje dá 404 | Wayback, depois archive.today |
+| URL que hoje dá 404 | Wayback, depois capturas já existentes no archive.today (consultar não publica nada) |
 | "O que o site dizia antes de X" | CDX da Wayback com `collapse=digest` (datas em que o conteúdo mudou) |
 | Página com muito JavaScript ou post de rede social | archive.today (DOM renderizado) |
 | Wayback com exclusão | archive.today, depois Common Crawl |
 | Caminhos e subdomínios desconhecidos | CDX com `matchType=domain` |
-| Evidência que não pode se perder | Capturar você mesmo (WARC) e enviar a dois arquivos |
+| Evidência que não pode se perder | Capturar você mesmo (WARC; ver osint-preservacao-evidencias) e, se o caso não for sigiloso, enviar a dois arquivos públicos — enviar publica a URL |
 ```bash
 curl -s 'http://web.archive.org/cdx/search/cdx?url=exemplo.com.br/*&output=json&fl=original&collapse=urlkey'
 curl -s 'http://web.archive.org/cdx/search/cdx?url=exemplo.com.br/quem-somos&output=json&collapse=digest&fl=timestamp,digest,statuscode'

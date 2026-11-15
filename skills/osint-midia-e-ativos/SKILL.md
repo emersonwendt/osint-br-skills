@@ -55,7 +55,8 @@ Ler: `DateTimeOriginal` (disparo) vs `CreateDate`/`ModifyDate`; `OffsetTime*`; `
 - "Semelhante" não é "a mesma". Primeira indexação ≠ primeira publicação: estabelecer a mais antiga com data e arquivá-la.
 - Banco de imagens contamina atribuição (a "foto do CEO" de site de golpe costuma ser stock).
 - Imagem gerada por IA não tem origem a encontrar.
-- Enviar imagem sigilosa a buscador comercial é vazamento: avaliar antes.
+- Enviar imagem sigilosa a buscador comercial é vazamento: avaliar antes. TinEye declara que não guarda a imagem enviada; Google Lens, Bing e Yandex não oferecem essa garantia.
+- Análise forense sem enviar o arquivo: Forensically (roda no navegador, local), Sherloq, ExifTool e c2patool (ver `ints-outras-disciplinas`, referência de IMINT). FotoForensics torna públicos os envios e veda uso jurídico no plano gratuito: não usar com material de caso.
 
 ### A4. Autenticidade
 | Afirmação testada | Faça primeiro | Não isto |

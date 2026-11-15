@@ -1,0 +1,13 @@
+{
+  "name": "osint-br",
+  "version": "1.1.0",
+  "description": "Skills OSINT adaptadas ao Brasil: método, infraestrutura digital, mídia e ativos, identidade digital, preservação de evidências e demais disciplinas de inteligência, com um agente analista.",
+  "author": {
+    "name": "Emerson Wendt",
+    "url": "https://orcid.org/0000-0002-0195-5445"
+  },
+  "homepage": "https://github.com/emersonwendt/osint-br-skills",
+  "repository": "https://github.com/emersonwendt/osint-br-skills",
+  "license": "MIT",
+  "keywords": ["osint", "inteligencia", "investigacao", "cadeia-de-custodia", "brasil", "socmint", "geoint", "cybint"]
+}
