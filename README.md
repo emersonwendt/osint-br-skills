@@ -16,8 +16,13 @@ Organização: **Prof. Dr. Emerson Wendt** — PPGD Universidade La Salle. Mater
 | [`osint-fontes-abertas`](skills/osint-fontes-abertas/SKILL.md) | Núcleo: método | Escopo autorizado, limites, canais formais (Marco Civil, Lei 12.850/2013), ciclo de inteligência, Sistema Almirantado, hipóteses concorrentes, escala de probabilidade, OPSEC, cadeia de custódia (CPP, arts. 158-A a 158-F), relatório, grafo de vínculos |
 | [`osint-infraestrutura-digital`](skills/osint-infraestrutura-digital/SKILL.md) | Domínios, sites, servidores | RDAP do Registro.br, DNS, IP/ASN, Certificate Transparency, Shodan/Censys, Wayback e WARC, pesquisa avançada, histórico Git, roteiro de site de golpe |
 | [`osint-midia-e-ativos`](skills/osint-midia-e-ativos/SKILL.md) | Imagens, empresas, cripto, veículos | Metadados, busca reversa, autenticidade, geolocalização com pistas brasileiras, CNPJ e beneficiário final, criptoativos (Res. BCB 519–521/2025), aeronaves (RAB/ANAC) e embarcações |
+| [`osint-identidade-digital`](skills/osint-identidade-digital/SKILL.md) | Nome de usuário, e-mail, telefone, perfis públicos | Roteiro priorizado por seletor, validação de acertos de enumeração, plataformas e mensageria, ferramentas a evitar |
+| [`osint-preservacao-evidencias`](skills/osint-preservacao-evidencias/SKILL.md) | Evidência que não pode se perder | Captura local (SingleFile, WARC, WACZ), sigilo dos arquivos públicos, manifesto com SHA-256 e script de registro e conferência |
+| [`ints-outras-disciplinas`](skills/ints-outras-disciplinas/SKILL.md) | Demais disciplinas de inteligência | CYBINT/DNINT, forense digital, FININT, GEOINT, IMINT, TECHINT, MASINT, MEDINT/BIOINT, apoio a HUMINT e SIGINT em transmissões abertas, com o que exige canal formal |
 
-A skill-núcleo vale sempre e encaminha o trabalho para as técnicas conforme o seletor inicial (domínio, imagem, CNPJ, carteira, matrícula de aeronave).
+A skill-núcleo vale sempre e encaminha o trabalho para as técnicas conforme o seletor inicial (domínio, imagem, CNPJ, carteira, matrícula de aeronave, nome de usuário).
+
+O agente [`analista-osint-br`](agents/analista-osint-br.md) conduz a investigação do escopo ao relatório, aplicando as skills com coleta passiva, manifesto de evidências e rótulos calibrados (disponível no Claude Code).
 
 ## Instalação rápida
 
@@ -27,7 +32,16 @@ A skill-núcleo vale sempre e encaminha o trabalho para as técnicas conforme o 
 2. No Claude, abra **Settings > Capabilities** e confirme que *Code execution and file creation* está ativo.
 3. Em **Skills**, clique em **Upload skill** e envie cada `.zip`.
 
-**Claude Code** (macOS/Linux):
+**Claude Code como plugin** (recomendado; instala as skills e o agente):
+
+```text
+/plugin marketplace add emersonwendt/osint-br-skills
+/plugin install osint-br@osint-br-skills
+```
+
+Use o plugin **ou** a instalação solta abaixo, não as duas: as mesmas skills apareceriam duas vezes.
+
+**Claude Code, instalação solta** (macOS/Linux):
 
 ```bash
 git clone https://github.com/emersonwendt/osint-br-skills.git
@@ -42,7 +56,9 @@ Passo a passo completo, testes e exercícios: [docs/guia-alunos.md](docs/guia-al
 ## Estrutura
 
 ```
-skills/                 as três skills (uma pasta por skill, com SKILL.md)
+skills/                 as skills (uma pasta por skill, com SKILL.md e, se preciso, referencias/ e scripts/)
+agents/                 agente analista (Claude Code)
+.claude-plugin/         manifesto do plugin e do marketplace
 docs/guia-alunos.md     guia de instalação, uso e aprimoramento
 scripts/                empacotamento (zips para o Claude) e instalação no Claude Code
 ETICA.md                limites de uso
@@ -51,6 +67,10 @@ CONTRIBUTING.md         como propor melhorias
 THIRD_PARTY_NOTICES.md  licença do material de terceiros (UseOSINT)
 CITATION.cff            como citar
 ```
+
+## Contribuições
+
+- **Alan Douglas Silva**, Professor na WB Educação (15/11/2026): skills `osint-identidade-digital`, `osint-preservacao-evidencias` e `ints-outras-disciplinas`; agente `analista-osint-br`; empacotamento como plugin do Claude Code; ajustes de sigilo e de ferramentas nas skills existentes. Ferramentas conferidas em página oficial ou repositório na data indicada.
 
 ## Contribuir
 

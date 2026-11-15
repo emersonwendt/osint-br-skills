@@ -10,4 +10,10 @@ Get-ChildItem (Join-Path $Raiz "skills") -Directory | ForEach-Object {
   Copy-Item -Recurse $_.FullName $alvo
   Write-Host "  instalada: $($_.Name)"
 }
-Write-Host "Pronto. Reabra o Claude Code para carregar as skills."
+$Agentes = Join-Path $HOME ".claude\agents"
+New-Item -ItemType Directory -Force $Agentes | Out-Null
+Get-ChildItem (Join-Path $Raiz "agents") -Filter *.md -ErrorAction SilentlyContinue | ForEach-Object {
+  Copy-Item -Force $_.FullName (Join-Path $Agentes $_.Name)
+  Write-Host "  agente: $($_.BaseName)"
+}
+Write-Host "Pronto. Reabra o Claude Code para carregar as skills e o agente."

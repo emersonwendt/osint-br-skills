@@ -13,4 +13,11 @@ for d in "$RAIZ"/skills/*/; do
   if [[ "$MODO" == "link" ]]; then ln -s "$d" "$DESTINO/$nome"; else cp -R "$d" "$DESTINO/$nome"; fi
   echo "  instalada: $nome"
 done
-echo "Pronto. Reabra o Claude Code para carregar as skills."
+AGENTES="${HOME}/.claude/agents"
+mkdir -p "$AGENTES"
+for f in "$RAIZ"/agents/*.md; do
+  [[ -e "$f" ]] || continue
+  cp "$f" "$AGENTES/"
+  echo "  agente: $(basename "$f" .md)"
+done
+echo "Pronto. Reabra o Claude Code para carregar as skills e o agente."

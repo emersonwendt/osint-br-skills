@@ -1,0 +1,15 @@
+{
+  "name": "osint-br-skills",
+  "owner": {
+    "name": "Emerson Wendt"
+  },
+  "description": "Marketplace do plugin OSINT-BR: skills de investigação em fontes abertas adaptadas ao Brasil.",
+  "plugins": [
+    {
+      "name": "osint-br",
+      "source": "./",
+      "description": "Skills OSINT adaptadas ao Brasil e agente analista, com limites éticos e cadeia de custódia.",
+      "version": "1.1.0"
+    }
+  ]
+}
